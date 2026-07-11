@@ -1,0 +1,20 @@
+筆記
+
+四色問題相關論文:
+How to colour a map with four clolurs, Kempe, Nature, vol 21 1879-80, 339-400
+Map-colour theorem, Heavood, 1890
+Solution of Heawood's empire problem in the plane, Jackson, Ringel, 1984
+The four-colour theorem, Rohertson, Sanders, Seymour and Thomas, 1997
+放電論證法，Heesch
+=============================================================================
+在神奇時鐘顯示為0時，時鐘A來到神奇時鐘的位置，也顯示時間為0。
+過了 2*sqrt(3) 秒，時鐘B來到神奇時鐘的位置，時鐘B顯示時間為 4*sqrt(3)秒，
+這似乎和 "移動中的時鐘時間跑得較慢" 相矛盾，畢竟時鐘A和時鐘B在移動的坐標系，時間怎麼反而跑得比較快呢?
+其實並沒有矛盾產生，在原先的座標系，移動的時鐘只有神奇時鐘一個，兩次都是去看神奇時鐘顯示的時間，但是在後來的情況下，
+第一次看的是時鐘A，第二次看的卻是時鐘B。
+============================================================================
+They have 10 minutes to get root access to a Python web server, expose its SSL encryption, 
+and then interpret all traffic over its secure port. All behind a Pix Firewall Emulator.
+Hacking's supposed to be stealth, so every time the server detects an infusion, ...
+
+================================================================================
