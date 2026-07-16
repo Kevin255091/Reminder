@@ -1,2 +1,10 @@
 1-(1-苯基環己基)哌啶    1-(1-Phenylcyclohexyl)piperidine
-1-丁醇    1-Butanol
+1-丁醇    1-butanol
+1-丙醇    1-propanol
+2-甲基-1-丙醇    2-methyl-1-propanol    
+2-甲基丁酸乙酯    ethyl 2-methylbutyrate
+2-苯乙醇    2-phenylethanol
+3-戊酮    3-pentanone
+3-甲基吩坦尼    3-Methylfentanyl
+3-羥吲哚    3-hydroxyindole
+4-甲基-2-戊醇    4-Methyl-2-pentanol
