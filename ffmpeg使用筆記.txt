@@ -1,0 +1,403 @@
+ffmpeg -i video.mp4 -i audio.mp3 output.mp4
+ffmpeg -i video.mp4 -i audio.wav -c copy output.mkv
+ffmpeg -i input.flac -ab 320k output.mp3
+ffmpeg -i input-video.avi -vn -acodec copy output-audio.aac
+    /* -vn is no video, -acodec copy says use the same audio stream that's already in there.*/
+    /* Read the output to see what codec it is, to set the right filename extension.*/
+ffmpeg -ss 0 -i original.m4a -acodec copy -t 522 new.m4a
+ffmpeg -i old.m4a -ss 593 -acodec copy -to 1248 new.m4a
+ffmpeg -i old.m4a -ss 00:00 -acodec copy -to 05:03 new.m4a
+ffmpeg -i old.m4a -ss 00:00:00 -acodec copy -to 01:05:03 new.m4a
+ffmpeg -i a.ogg -ss 00:01:02.500 -t 00:01:03.250 -c copy x2.ogg
+ffmpeg -i input.flv -ss 2 -vcodec copy -acodec copy output.flv
+ffmpeg -i input.mp4 -vcodec copy -acodec copy -to 0:05 new.mp4
+ffprobe input.m4a
+ffmpeg -i input-video.avi -vn -map 0:a output-audio.m4a
+    /* extract audio from video and save it as m4a file */
+ffmpeg -i input.m4a -ab 97k -af "highpass=f=200, lowpass=f=6000" output.mp3
+ffmpeg -i input.m4a -ab 97k -af volume=0.7,lowpass=6000 output.mp3
+
+ffmpeg -i in.mov -map_metadata -1 -c:v copy -c:a copy out.mov
+
+ffmpeg -i "concat:VTS_01_1.VOB|VTS_01_2.VOB|VTS_01_3.VOB|VTS_01_4.VOB|VTS_01_5.VOB" -crf 20 -c:a ac3 -af lowpass=5000 -c:s copy -map 0:1 -map 0:2 -map 0:3 G:\Story_01_02_03\output.mkv
+ffmpeg -analyzeduration 100M -probesize 100M -i "concat:VTS_01_1.VOB|VTS_01_2.VOB|VTS_01_3.VOB|VTS_01_4.VOB|VTS_01_5.VOB" -crf 18 -c:a ac3 -af lowpass=5000 -c:v libx265 -c:s copy -map 0:1 -map 0:2 -map 0:3 G:\video.mkv
+ffmpeg -analyzeduration 100M -probesize 100M -i "concat:VTS_01_1.VOB|VTS_01_2.VOB|VTS_01_3.VOB|VTS_01_4.VOB|VTS_01_5.VOB|VTS_01_6.VOB" -crf 20 -c:a ac3 -af lowpass=5000 -c:s copy -map 0:1 -map 0:2 -map 0:4 F:\output.mkv
+ffmpeg -analyzeduration 100M -probesize 100M -i "concat:VTS_01_1.VOB|VTS_01_2.VOB|VTS_01_3.VOB|VTS_01_4.VOB|VTS_01_5.VOB" -f mpeg -c copy G:\FD819.mpeg
+ffmpeg -analyzeduration 100M -probesize 100M -i "concat:VTS_02_1.VOB|VTS_03_1.VOB|VTS_04_1.VOB|VTS_05_1.VOB|VTS_06_1.VOB" -c:v libx265 -crf 21 -c:a copy -map 0:1 -map 0:2 F:\video.mkv
+ffmpeg -analyzeduration 100M -probesize 100M -i B1_t00.mkv -crf 18 -c:a ac3 -af lowpass=5000 -c:v libx265 -c:s copy -map 0:0 -map 0:1 -map 0:2 G:\video.mkv
+
+python C:\Users\KevinLin\PythonCode\transform_many_flac_to_mp3.py -af loudnorm=-18:4 -af lowpass=f=3500 -af highpass=f=210 -af equalizer=f=4000:width=3000:g=-20
+ffmpeg -i input.mp4 -vf fade=in:0:d=5,fade=out:st=595:d=5 -af afade=in:0:d=5,afade=out:st=595:d=5 output.mp4
+
+ffmpeg -i InputOne.ts -ss 00:02:00.0 -c copy -map 0:v -map 0:a OutputOne.ts
+ffmpeg -i InputTwo.ts -c copy -t 00:03:05.0 -map 0:v -map 0:a OutputTwo.ts
+
+ffmpeg -i title.mkv -map 0 -c copy -ss 00:21:05 -to 00:22:10 clip.mp4
+
+ffmpeg -i clip.mp4 -map 0 -c:v libx265 -crf 18 -c:a copy -c:s copy clip_265_crf18.mp4
+/* 18 ~ 23 */
+
+ffmpeg -i src.mp4 -map_metadata -1 -map 0:0 -map 0:1 -map 0:2 -map 0:3 -c:v libx265 -crf 18 -c:a copy -c:s copy output.mp4
+
+/*change the fps*/
+ffmpeg -i <input> -filter:v fps=30 <output>
+
+/*ffmpeg -i clip.mp4 -map 0 -c:v libx265 -c:a copy -c:s copy -rc constqp -qp 20 clip_265_qp20.mp4 */
+(qp不太行，不知道是不是ffmpeg的版本問題)
+
+讀取音檔長度方法:
+ffprobe -i <file> -show_entries format=duration -v quiet -of csv="p=0" -sexagesimal
+
+抓取video bitrate的方法:
+ffprobe -v quiet -select_streams v:0 -show_entries format=bit_rate -of default=noprint_wrappers=1:nokey=1 inputvideo.mp4
+
+#將interlaced video 轉換成 progressive video
+#A criteria to choose yadif vs bwdif could be whether one needs to double the frame rate; 
+#if not, then maybe bwdif can be better.
+#如果原本的影片沒有interlaced，或者ffprobe表明是用progressive，就不需要加 -vf bwdif=0，不然結果只會更差
+ffmpeg -i in.mkv -map 0:0 -map 0:1 -map 0:2 -map 0:3 -c:v libx265 -crf 18 -vf bwdif=0 -c:a copy -c:s copy out.mp4
+
+# detect interlacing with the ffmpeg "idet" filter, the more frames
+# you extract, the better, though it's never 100% accurate
+ffmpeg -filter:v idet -frames:v 100 -an -f rawvideo -y NUL -i video.mkv
+# Example output (this is interlaced, TFF style)
+# [Parsed_idet_0 @ 0x1ccf7c0] Single frame detection: TFF:167 BFF:0 Progressive:1 Undetermined:0
+# [Parsed_idet_0 @ 0x1ccf7c0] Multi frame detection: TFF:168 BFF:0 Progressive:0 Undetermined:0
+
+ffmpeg -filter:v idet -frames:v 100 -an -f rawvideo -y NUL -i video.mkv
+# Example output (this is not interlaced):
+# [Parsed_idet_0 @ 0x1bcf720] Single frame detection: TFF:0 BFF:0 Progressive:564 Undetermined:84
+# [Parsed_idet_0 @ 0x1bcf720] Multi frame detection: TFF:0 BFF:0 Progressive:623 Undetermined:25
+
+# flags:
+# -an            = discard audio, we don't need it
+# -f rawvideo    = output raw video
+# -y NUL   = discard the output
+# -i ...         = the input file to check
+# -frames:v 100  = extract the first 100 frames
+# -filter:v idet = insert the "idet" filter, which will output whether it has detected interlaced frames
+
+#To downmix an audio stream to stereo and transcode it to the AC3 codec, for example:
+ffmpeg -i "sourcetrack.dts" -c:a ac3 -ac 2 "stereotrack.ac3"
+
+製作一個只有聲音的全黑影片:
+ffmpeg -loop 1 -i black.jpg -i input_music.m4a -c:v libx264 -tune stillimage -shortest output.mp4
+/*-loop 1 -framerate 2 -i input1.png  tells ffmpeg to loop input1.png forever, at a frame rate of 2fps.
+-shortest makes ffmpeg stop when the shortest input ends - input2.aiff in this case. */
+
+/* Crop video and transform 60 fps into 30 fps */
+ffmpeg -i input.ts -vf   "crop=353:718:925:25,fps=fps=30" -c:v libx265 -c:a copy out.mp4
+/** ffmpeg -i in.mp4 -vf "crop=out_w:out_h:x:y" out.mp4
+    out_w is the width of the output rectangle
+    out_h is the height of the output rectangle
+    x and y specify the top left corner of the output rectangle 
+    (coordinates start at (0,0) in the top left corner of the input)
+*/
+
+抓取影片特定秒數(大約)的截圖:
+ffmpeg -ss 01:23:45 -i input -frames:v 1 -q:v 2 output.jpg
+/**
+For JPEG output use -q:v to control output quality. 
+Full range is a linear scale of 1-31 where a lower value results in a higher quality. 
+2-5 is a good range to try.
+
+The select filter provides an alternative method for more complex needs such as 
+selecting only certain frame types, or 1 per 100, etc.
+
+Placing -ss before the input will be faster. 
+See FFmpeg Wiki: Seeking and this excerpt from the ffmpeg cli tool documentation.
+*/
+
+將black.jpg 覆蓋在 input.mp4(擷取38秒到49秒)
+ffmpeg -ss 38 -to 49 -i input.mp4 -i black.jpg -filter_complex "[0:v][1:v]overlay=0:1433" -c:v libx265 -c:a copy part1.mp4
+
+    /*鏡向翻轉影片 mirror flip*/
+ffmpeg -i input.mp4 -vf hflip -c:a copy output.mp4
+
+    /*順時鐘旋轉90度*/
+ffmpeg -i in.mov -vf "transpose=1" -c:a copy out.mov
+/**
+0 = 90° counterclockwise and vertical flip (default)
+1 = 90° clockwise
+2 = 90° counterclockwise
+3 = 90° clockwise and vertical flip
+Use -vf "transpose=2,transpose=2" for 180 degrees.
+**/
+
+Add another audio to video
+ffmpeg -i input.mkv -i audio.dts -map 0 -map 1 -c copy output.mkv
+The default stream selection behavior only chooses one stream per stream type, 
+so in this case you have to use -map to tell it which streams you want.
+The input file index starts counting from 0, so using -map 0 will 
+choose all streams from the first input (input.mkv), and -map 1 will 
+choose all streams from the second input (audio.dts).
+The result is that output.mkv will contain all of the streams from both inputs. 
+Using -c copy will stream copy the streams, so they will simply be re-muxed without additional re-encoding.
+
+Create silent audio
+ffmpeg -f lavfi -i anullsrc=r=44100:cl=mono -t <seconds> -q:a 9 -acodec libmp3lame out.mp3
+
+/*
+Add another audio to video
+The -map option allows you to manually select streams / tracks. See FFmpeg Wiki: Map for more info.
+This example uses -c:v copy to stream copy (mux) the video. No re-encoding of the video occurs. 
+Quality is preserved and the process is fast.
+If your input audio format is compatible with the output format then change -c:v copy to -c copy to 
+stream copy both the video and audio.
+If you want to re-encode video and audio then remove -c:v copy / -c copy.
+The -shortest option will make the output the same duration as the shortest input.
+**/
+ffmpeg -i video.mkv -i audio.mp3 -map 0 -map 1:a -c:v copy -shortest output.mkv
+
+
+製作mp3 cover art:
+ffmpeg -i in.mp3 -i test.jpg -map 0:0 -map 1:0 -c copy -id3v2_version 3 -metadata:s:v title="cover" -metadata:s:v comment="Cover (front)" out.mp3
+
+抓取mp3 cover art:
+ffmpeg -i input.mp3 -an -vcodec copy cover.jpg
+
+type Nul > Do_not_copy
+/* Create an empty file "Do_not_copy" using cmd under windows system */
+
+合併影音檔案:
+with open('mylist.txt', 'w', encoding='utf-8') as fout:
+    for name in mp3_file_list:
+        fout.write('file ' + name + '\n')
+
+ffmpeg -f concat -safe 0 -i mylist.txt -c copy All_in_one.mp3
+ffmpeg -i 401_727.ts -vf scale=1280:720 -c:v libx264 -crf 0 -preset veryslow -c:a copy 401_727.mp4
+ffmpeg -i 401_727.ts -vf scale=852:480 -c:v libx265 -crf 18  -c:a copy 401_727.mp4
+
+#To downmix an audio stream to stereo and transcode it to the AC3 codec, for example:
+ffmpeg -i "sourcetrack.dts" -c:a ac3 -ac 2 "stereotrack.ac3"
+
+/** Here is an example which should give you the highest quality video 
+(I'm not speaking about the resulting file size). 
+Note that this video might not be playable on all devices or players:
+
+ffmpeg -i MyMovie.mkv -vf scale=-1:720 -c:v libx264 -crf 0 -preset veryslow -c:a copy MyMovie_720p.mkv
+
+To get a "visually lossless" quality, you can use:
+
+ffmpeg -i MyMovie.mkv -vf scale=-1:720 -c:v libx264 -crf 18 -preset veryslow -c:a copy MyMovie_720p.mkv
+
+Now let's see what we have here:
+
+The scale video filter is for resizing the video. 
+You just set one size – which is the height in this example 
+– and use -1 for the other dimension. ffmpeg will recalculate the correct value automatically 
+while preserving the aspect ratio.(Not working everytime!)
+
+Quality controlled with the -crf option:
+
+The range of the quantizer scale is 0-51: where 0 is lossless, 23 is default, and 51 is worst possible. 
+A lower value is a higher quality and a subjectively sane range is 18-28. 
+Consider 18 to be visually lossless or nearly so: 
+it should look the same or nearly the same as the input but it isn't technically lossless.
+
+The range is exponential, so increasing the CRF value +6 is roughly half the bitrate while -6 
+is roughly twice the bitrate. General usage is to choose the highest CRF value that still 
+provides an acceptable quality. If the output looks good, then try a higher value and 
+if it looks bad then choose a lower value.
+
+You can find more info in the x264 encoding guide.
+
+You control the tradeoff between video encoding speed and compression efficiency with the -preset options. 
+Those are ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow. 
+Default is medium. The veryslow option offers the best compression efficiency 
+(resulting in a smaller file size for the same quality) but it is very slow – as the name says.
+
+The audio will be stream copied directly from the input file to the output file without any changes.
+
+To also copy subtitles in mkv without converting, you can add -scodec copy. – Casper Apr 29, 2017 at 3:53 
+
+I think to get 720p you must set the width to 1280 i.e. not -vf scale=-1:720 but -vf scale=1280:-1. 
+– cdlvcdlv Jan 30, 2018 at 10:37 
+
+@chovy The question asked for 720p, which means a height of 720. The width can be anything, so leaving it as -1 
+is best to allow ffmpeg to decide based on the previous dimensions. 
+Only time you'd need to specify the width is if it decides on an odd value for the new width. 
+– Wlerin Apr 15, 2019 at 0:34 
+
+@Wlerin That's wrong. 720p is only 720 tall in 16:9. 720p should always be 1080 wide, 
+and 1080p should always be 1920 wide. The height can be anything, hense @cdlvcdlv is correct. 
+Should be -vf scale=1280:-1. – MiniGod Jun 24, 2021 at 10:33 
+
+@MiniGod Strictly speaking neither 1080p nor 720p mean anything outside of 16:9. 
+However, the height is literally baked into both designations, while the width isn't. 
+Perhaps more accurately, you should pick whichever of 1280:-1 and -1:720 makes the result fit 
+between 1280x720. Neither 1920x720 nor 1280x1200 are 720p. – Wlerin Jun 25, 2021 at 17:21 
+
+Thank you very much :) – gyozo kudor May 13, 2022 at 16:19
+
+-vf scale=w=1280:h=720:force_original_aspect_ratio=decrease to fit the video into 1280x720 
+(source) – milahu Aug 27, 2022 at 15:25
+
+also try adding -sws_flags lanczos which is better than bicubic for downscaling (source) 
+– milahu Aug 27, 2022 at 15:53
+*/
+
+/**
+Update 2020: This answer was written in 2009. Since 2013 a video format much better than H.264 
+is widely available, namely H.265 (better in that it compresses more for the same quality, 
+or gives higher quality for the same size). To use it, replace the libx264 codec with libx265, 
+and push the compression lever further by increasing the CRF value — add, say, 4 or 6, 
+since a reasonable range for H.265 may be 24 to 30. 
+Note that lower CRF values correspond to higher bitrates, and hence produce higher quality videos.
+
+ ffmpeg -i input.mp4 -vcodec libx265 -crf 28 output.mp4
+To see this technique applied using the older H.264 format, see this answer, 
+quoted below for convenience:
+
+Calculate the bitrate you need by dividing your target size (in bits) by the video length (in seconds). 
+For example for a target size of 1 GB (one gigabyte, which is 8 gigabits) 
+and 10 000 seconds of video (2 h 46 min 40 s), use a bitrate of 800 000 bit/s (800 kbit/s):
+
+ffmpeg -i input.mp4 -b 800k output.mp4
+Additional options that might be worth considering is setting the Constant Rate Factor, 
+which lowers the average bit rate, but retains better quality. 
+Vary the CRF between around 18 and 24 — the lower, the higher the bitrate.
+
+ffmpeg -i input.mp4 -vcodec libx264 -crf 20 output.mp4
+
+Another thing are the subtitles. I don't want them to embed, 
+but I'd like the new srt or sub file to fit the new converted video. – xralf  May 11, 2012 at 7:42
+
+I found that the former made the first few seconds blocky and pixelized 
+(a la this question on SuperUser) but adding the -crf option without changing anything 
+else resolved this issue. – abeboparebop Aug 23, 2016 at 15:59
+
+The second command took a 101MB mp4 file I had, and created a 121MB output.mp4. 
+– Martin Argerami Dec 28, 2016 at 19:11
+
+Second command, using -crf 24 took a 255.3MB video I had and reduced it to 72.7MB without 
+lowering the quality noticeably. Have an upvote! – Patrick Roberts Mar 25, 2017 at 18:14
+
+Impressively reduced a ~2G video to 14MB, still looks good, this was the first search result 
+and it's exactly what I was looking for, thanks! – sinisterstuf Mar 30, 2018 at 12:20
+
+Might be good to note that you can now use libx265 for even more size reduction. – ZN13 Apr 13, 2018 at 19:55
+
+Used ffmpeg -i input.avi -vcodec libx264 -crf 24 output.avi. It reduced a 100mb video to 9mb.. 
+Very little change in video quality. Thank you! – alpha_989 May 23, 2018 at 22:02
+
+The answer is good, but I want to point out another detail: 
+Some devices (e.g. old tablets, a raspberry pi 1) may not only feature low memory, 
+but also low processing power. In such cases, you may want to limit the complexity of the 
+decompression by restraining the profile via -profile:v baseline 
+(as shown at superuser.com/questions/371460/…). 
+Also -pix_fmt yuv420p is good for compatibility 
+and -movflags +faststart allows an early start. – Hermann Jan 1, 2019 at 21:30
+
+Second option is awesome, original file was 376MB mp4, crf of 20 reduced it to about 49MB 
+without considerable artifacts, worth an upvote! – Harshiv Jan 24, 2019 at 12:08
+
+@Hermann The second solution also solved problems I had with videos on a laptop with plenty of memory 
+but limited CPU power. My cheap IdeaPad 100S with an Intel Celeron N3050 1.6GHz CPU choked 
+on most of my downloaded Youtube videos but using the 2nd solution solved it completely. 
+If I come across one that dosn't play, I'll try your solution. – John Pankowicz Jan 28, 2019 at 1:14
+
+This takes forever! Is this normal, the time it takes. I am trying to lower a 1G video. 
+– Fadwa Apr 3, 2019 at 9:29
+
+Worked for me. Reduced 625MB to 140 with libx265 -crf 24. And the initial video was already cut at low quality 
+in iMovie. Interestingly, running it again over the resulting file reduced it further to 123MB. 
+– André Levy Jun 11, 2019 at 8:02
+
+Another success story here with ffmpeg -i output.mp4 -vcodec libx264 -crf 24 output_compressed.mp4 
+from 2.5 GB 1920x1080 20min video down to 287.9 MB, huge reduction, amazing! – user79560 Mar 5, 2020 at 19:39
+
+Please note that the quoted answer included a dramatic miscalculation (mixing bytes and bits) 
+which lead the “fixed bitrate” method to compress 8 times more than intended. 
+This has been fixed. – Maëlan Mar 15, 2020 at 22:58
+
+The first method i.e. achieving a given constant bitrate is discouraged as it degrades quality 
+much more than needed, because of its rigidness (the bitrate must never raise above the threshold). 
+To control the size (rather than quality) of the output, the recommended method is to achieve 
+a given average bitrate using two passes, as explained by this answer <unix.stackexchange.com/a/289322>. 
+This is better because the 1st pass allows the codec to allocate bit usage based on needs, 
+i.e. it can spare bits on easy frames and have more available to spend on more demanding frames. 
+– Maëlan Mar 16, 2020 at 1:37 
+
+Second command it's the best. And then convert mp4 to webm, – somenxavier Mar 19, 2020 at 9:30
+
++1: This reduced a .mov file's to a fifth without reducing resolution or image quality: 
+ffmpeg -i vid.mov -b 8507k out.mp4. 
+The .mov file's format was MPEG-4 according to mediainfo. 
+It used h264 as the video codec, 
+judging from the output of ffmpeg -i vid.mov 2>&1. – Matthias Braun Mar 20, 2020 at 12:24
+
+don't use libx265 if you plan to use it on html5 video, 
+see gist.github.com/Vestride/278e13915894821e1d6f#support – Lluís Apr 13, 2020 at 11:02
+
+For the first option my ffmpeg complains: Please use -b:a or -b:v, -b is ambiguous. 
+BTW, Why not just decrease the original bitrate by a certain factor? 
+get the bitrate with ffmpeg -i inputfile and then just use a lower number in the first option. 
+May this avoid the issue of actually increasing the video size? – alexis May 5, 2020 at 18:35
+
+Reminder to everyone who upvotes this answer to also upvote the answer this one is quoted from. 
+Gotta upvote the OP. – Joeytje50 May 10, 2020 at 13:50
+
+Here is a very well-written and informative article about CRF (Constant Rate Factor) 
+and what it means: slhck.info/video/2017/02/24/…. – Gabriel Staples Jun 15, 2020 at 3:13
+
+Hi. After ` ffmpeg -i input.mp4 -vcodec libx265 -crf 28 output.mp4` 
+ios devices cannot seem to play the video. 
+AFAIK after ios11 HEVC is supported. Any idea on this? – Arka Prava Basu Jun 26, 2020 at 8:19
+
+I was able to reduce file size from 10 megabits to 5 megabits. My video was 1080p, 
+so I added -s hd720 and it reduced it from 10 megabits to 1 megabit. – KetZoomer Oct 5, 2020 at 19:31
+
+After using libx265 can not open video nor in Chrome nor in QuickTime Player. 
+libx264 yields 15% larger file, but it's more compatible. – Shimon S Nov 19, 2020 at 19:33
+
+ffmpeg -i input.mp4 -vcodec libx264 -crf 24 output.mp4 and i got a video of size 80mb from 290 mb. 
+No visible loss of quality(at least to my eyes). Thanks. – Abinash Dash Dec 13, 2020 at 16:33
+
+if h.265 is better than 264 (and you said that in 2013) why now in 2021 h.264 is still widely used 
+over h.265? – vdegenne Jan 5, 2021 at 22:55
+
+Tried first method and cant use the file with ios. Instead I used 
+ffmpeg -i input.mp4 -vcodec libx264 -crf 28 output.mp4 and worded fine. 
+On converting some 58Mb file, libx265 gave a 10MB while using libx264 gave 13Mb, 
+so not much difference and less headaches – West Feb 27, 2021 at 5:12
+
+@AkraPravaBasu: According to Comparing H.265 (HEVC) and H265 video file size, 
+adding -tag:v hvc1 allowed QuickTime (on a Mac) to play converted H265 files. – Miles Wolbe Mar 25, 2021 at 1:57
+ 
+It is also worth noting that libx265 is not the only H.265 encoder. 
+By compiling ffmpeg with hardware acceleration options (which is available on recent Mac, 
+Linux and Windows machines), faster encoders will be available 
+(for example, -vcodec hevc_qsv on Linux/Windows). 
+See: trac.ffmpeg.org/wiki/HWAccelIntro – Tianyi Shi Apr 1, 2021 at 20:28 
+
+This answer should probably also mention that H.265 hardware decoding (or encoding!) may not be supported 
+on all devices and that the encoding process is typically much slower than H.264. – Mateen Ulhaq May 1, 2021 at 5:51
+
+For @arka-prava-basu and @shimon-s , adding -tag:v hvc1 makes the result Quicktime compatible, 
+with no change to file size! – Heath Raftery Jan 26, 2022 at 11:14
+
+Caveat Emptor: If I upload the 265 video to reddit, it gets refused, but the 264 is accepted. – Bram Mar 8, 2022 at 18:23
+
+could you also recommend the best free video format? ideally something made with agpl, 
+even if ffmpeg still haven't done it themselves. – cregox Mar 19, 2022 at 8:23
+
+Works great ! got down to approx. 88 MB from 412 MB ! – code2be May 18, 2022 at 18:18
+
+To keep MacOs preview function 
+ffmpeg -i i.mp4 -c:v libx265 -preset fast -crf 30 -tag:v hvc1 -c:a eac3 -b:a 224k o.mp4 
+– Ax_ Aug 15, 2022 at 6:11
+
+You may also be interested what -crf flag does (Constant Rate Factor). ⦿ 
+For x264 and x265 the range of the quantized scale is 0-51: 0 is lossless, 23 is default, 
+and 51 is the worst possible. ⦿ CRF 28 on x265 is approximately equivalent to CRF 23 on x264 ⦿ 
+x265 compression is significantly better, but it's way much slower 
+(in my test I got 16Mb mp4 video with libx264 -crf 24 and it becomes 4Mb with libx265 -crf 28 
+– LetfarOct 18, 2022 at 9:48 
+ 
+*/
+
+
+ffprobe -loglevel quiet -select_streams v:0 -show_entries stream=width,height -of csv=p=0 filename.mp4
+
+/** This only outputs the resolution of the input filename.mp4 */
