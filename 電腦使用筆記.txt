@@ -408,3 +408,4 @@ wget  --mirror -p --convert-links [url]
 wget -E -H -k -p [url]
 wget -r -A jpeg,jpg,bmp,gif,png [url]
 wget -E -k -r -l 1 -p -np [url] download a page and its subpages (only 1 level)
+(-np 可以拿掉，因為可能參考到上層的html)
