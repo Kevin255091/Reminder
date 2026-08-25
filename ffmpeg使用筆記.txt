@@ -401,3 +401,10 @@ x265 compression is significantly better, but it's way much slower
 ffprobe -loglevel quiet -select_streams v:0 -show_entries stream=width,height -of csv=p=0 filename.mp4
 
 /** This only outputs the resolution of the input filename.mp4 */
+
+
+#以下指令對真正意義上的動態網站(比如說圖片網址是執行javascript之後才得到的)是沒辦法完善的
+wget  --mirror -p --convert-links [url]
+wget -E -H -k -p [url]
+wget -r -A jpeg,jpg,bmp,gif,png [url]
+wget -E -k -r -l 1 -p -np [url] download a page and its subpages (only 1 level)
