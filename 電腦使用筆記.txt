@@ -85,6 +85,22 @@ ffmpeg -loop 1 -i black.jpg -i input_music.m4a -c:v libx264 -tune stillimage -sh
 /*-loop 1 -framerate 2 -i input1.png  tells ffmpeg to loop input1.png forever, at a frame rate of 2fps.
 -shortest makes ffmpeg stop when the shortest input ends - input2.aiff in this case. */
 
+用所有寫在 input.txt 裡的圖檔來產生一部影片:
+ffmpeg -f concat -i input.txt -c:v libx264 -vf fps=10 -pix_fmt yuv420p output.mp4
+input.txt的格式如下
+file '/path/to/dog.png'
+duration 5
+file '/path/to/cat.png'
+duration 1
+file '/path/to/rat.png'
+duration 3
+file '/path/to/tapeworm.png'
+duration 2
+file '/path/to/tapeworm.png'
+
+參考資料 : https://trac.ffmpeg.org/wiki/Slideshow
+
+
 /* Crop video and transform 60 fps into 30 fps */
 ffmpeg -i input.ts -vf   "crop=353:718:925:25,fps=fps=30" -c:v libx265 -c:a copy out.mp4
 /** ffmpeg -i in.mp4 -vf "crop=out_w:out_h:x:y" out.mp4
