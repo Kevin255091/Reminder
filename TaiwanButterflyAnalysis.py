@@ -1,4 +1,5 @@
-import os
+#在Python Prompt之下，用from TaiwanButterflyAnalysis import *
+#之後就可以直接分析各個書本提到的蝴蝶種類差異
 
 def is_butterfly_name_line(line):
     L = line.strip().rstrip('\r\n')
