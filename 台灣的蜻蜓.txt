@@ -1,0 +1,358 @@
+台灣的蜻蛉目有16科89屬157種。				
+完整學名	中文名	原生/外來性	特有性	臺灣紅皮書
+
+晏蜓科 Aeshnidae				
+Aeschnophlebia ishigakiana (Asahina, 1951)	石垣晏蜓	原生		NNT
+    金瑞治水園區
+
+Aeschnophlebia risi (Asahina, 1964)	李斯晏蜓	原生		NLC
+
+Aeschnophlebia taiwana (Asahina, 1951)	陽明晏蜓	原生	臺灣特有	NLC
+    金瑞治水園區
+
+Aeshna petalura Martin, 1908	泰雅晏蜓	原生		NLC
+
+Anaciaeschna jaspidea Burmeister, 1839	碧翠晏蜓	原生		NLC
+
+Anaciaeschna martini Selys, 1897	烏基晏蜓	原生		NNT
+
+Anax guttatus Burmeister, 1839	烏點晏蜓	原生		NLC
+    金瑞治水園區
+
+Anax julius Brauer, 1865	綠胸晏蜓	原生		NE
+    金瑞治水園區 158 B、E
+    6-7公分
+    飛翔姿態，淘氣的小飛俠
+
+Anax nigrofasciatus Oguma, 1915	烏帶晏蜓	原生		NLC
+
+Anax panybeus Hagen, 1867	麻斑晏蜓	原生		NLC
+    金瑞治水園區 154
+
+Cephalaeschna risi Asahina, 1981	微刺晏蜓	原生		NVU
+Gynacantha bayadera Selys, 1891	浡鋏晏蜓	原生		NNT
+Gynacantha japonica Bartenef, 1909	倭鋏晏蜓	原生		NLC
+    金瑞治水園區
+
+Gynacantha ryukyuensis Asahina, 1962	琉球晏蜓	原生		NLC
+Gynacantha saltatrix Martin, 1909	舞鋏晏蜓	原生		NEN
+Gynacantha subinterrupta Rambur, 1842	長鋏晏蜓	原生		NLC
+Indaeschna erythromelas (McLachlan, 1896)	朱黛晏蜓	原生		NLC
+    金瑞治水園區
+Indaeschna melanictera (Selys, 1883)	描金晏蜓	原生		NNT
+Indaeschna ornithocephala (McLachlan, 1896)	喙鋏晏蜓	原生		NNT
+Periaeschna magdalena Martin, 1909	柱鋏晏蜓	原生		NNT
+Sarasaeschna chiangchinlii Chen & Yeh, 2014	鉤鋏晏蜓	原生	臺灣特有	NVU
+Sarasaeschna kaoi Yeh ,Lee  & Wong, 2015	短鋏晏蜓	原生	臺灣特有	NCR
+Sarasaeschna lieni (Yeh & Chen, 2000)	日清晏蜓	原生	臺灣特有	NNT
+Sarasaeschna pyanan (Asahina, 1951)	源埡晏蜓	原生	臺灣特有	NNT
+Sarasaeschna tsaopiensis (Yeh & Chen, 2000)	刃鋏晏蜓	原生	臺灣特有	NEN
+
+珈蟌科 Calopterygidae				
+Matrona cyanoptera Hämäläinen & Yeh, 2000	
+白痣珈蟌	原生	臺灣特有	NLC
+    金瑞治水園區 170
+
+Mnais tenuis Oguma, 1913	細胸珈蟌	原生		NNT
+    金瑞治水園區
+
+Neurobasis chinensis (Linnaeus, 1758)	綠翅珈蟌	原生		NE
+
+Psolodesmus mandarinus McLachlan, 1870	中華珈蟌	原生		NLC
+    金瑞治水園區 102
+
+鼓蟌科 Chlorocyphidae				
+Aristocypha baibarana Matsumura, 1931	簾格鼓蟌	原生	臺灣特有	NCR
+
+Heliocypha perforata (Percheron, 1835)	棋紋鼓蟌	原生		NLC
+    金瑞治水園區
+
+Libellago lineata (Burmeister, 1839)	脊紋鼓蟌	原生		NEN
+Rhinocypha taiwana Wang & Chang, 2013	朱環鼓蟌	原生	臺灣特有	NEN
+
+斑蜓科 Chlorogomphidae				
+Chlorogomphus brevistigma Oguma, 1926	短痣斑蜓	原生	臺灣特有	NNT
+
+Chlorogomphus risi Chen, 1950	褐翼斑蜓	原生	臺灣特有	NLC
+    金瑞治水園區
+
+Chlorogomphus suzukii (Oguma, 1926)	斑翼斑蜓	原生		NLC
+
+細蟌科 Coenagrionidae				
+Aciagrion migratum (Selys, 1876)	針尾細蟌	原生		NNT
+
+Agriocnemis femina Brauer, 1868	白粉細蟌	原生		NLC
+    金瑞治水園區
+
+Agriocnemis pygmaea (Rambur, 1842)	橙尾細蟌	原生		NLC
+    金瑞治水園區
+
+Ceriagrion auranticum Fraser, 1922	紅腹細蟌	原生		NLC
+    金瑞治水園區 46
+
+Ceriagrion fallax Ris, 1914	昧影細蟌	原生		NLC
+    金瑞治水園區 146 D
+    飛行緩慢，優雅高貴的芭蕾舞者
+
+Ceriagrion melanurum Selys, 1876	黃腹細蟌	原生		NCR
+Ceriagrion nipponicum Asahina, 1967	朱紅細蟌	原生		NCR
+
+Ischnura asiatica Brauer, 1865	亞東細蟌	原生		NE
+    金瑞治水園區 164
+
+Ischnura rubilio Selys, 1876	朝雲細蟌	原生		NCR
+
+Ischnura senegalensis (Rambur, 1842)	青紋細蟌	原生		NLC
+    金瑞治水園區 160 E
+    分布最廣的豆娘
+    體色多變
+
+
+Mortonagrion hirosei Asahina, 1972	四斑細蟌	原生		NCR
+Mortonagrion selenion (Ris, 1916)	月斑細蟌	原生		NE
+
+Paracercion calamorum (Ris, 1916)	葦笛細蟌	原生		NLC
+    金瑞治水園區 174 C、E
+    雄蜓身上感性又神秘的藍與黑，在視覺上帶給們一種平靜的效果及不做作的優雅，讓我們聯想到海洋及廣闊的星空
+
+Paracercion melanotum (Selys, 1876)	蔚藍細蟌	原生		NLC
+Paracercion sieboldii (Selys, 1876)	錢博細蟌	原生		NE
+Pseudagrion microcephalum (Rambur, 1842)	瘦面細蟌	原生		NLC
+
+Pseudagrion pilidorsum (Brauer, 1868)	弓背細蟌	原生		NLC
+    金瑞治水園區 50
+
+Pseudagrion rubriceps Selys, 1876	丹頂細蟌	原生		DD
+
+勾蜓科 Cordulegastridae				
+
+Anotogaster klossi Fraser, 1941	無霸勾蜓	原生		NLC
+    金瑞治水園區 118
+
+Sinorogomphus suzukii (Oguma, 1926)	斑翼勾蜓	原生		
+弓蜓科 Corduliidae				
+Hemicordulia mindana Needham & Gyger, 1937	岷峨弓蜓	原生		NEN
+Somatochlora taiwana Inoue & Yokota, 2001	臺灣弓蜓	原生	臺灣特有	NCR
+
+幽蟌科 Euphaeidae				
+
+Bayadera brevicauda Fraser, 1928	短尾幽蟌	原生	臺灣特有	NLC
+    金瑞治水園區
+
+Euphaea formosa Hagen, 1869	短腹幽蟌	原生	臺灣特有	NLC
+    金瑞治水園區 54
+
+春蜓科 Gomphidae				
+Anisogomphus maacki (Selys, 1872)	長唇春蜓	原生		NVU
+
+Asiagomphus hainanensis (Chao, 1953)	海南春蜓	原生		NNT
+    金瑞治水園區
+
+Asiagomphus pacificus (Chao, 1953)	雙角春蜓	原生		NVU
+Asiagomphus perlaetus (Chao, 1953)	圓痣春蜓	原生		NEN
+
+Asiagomphus septimus (Needham, 1930)	鉤紋春蜓	原生		NNT
+    金瑞治水園區
+
+Burmagomphus vermicularis Martin, 1904	蟲莖春蜓	原生		NLC
+Euthygomphus koxingai (Chao, 1954)	國姓春蜓	原生		NVU
+Fukienogomphus prometheus (Lieftinck, 1939)	火神春蜓	原生		NNT
+
+Gomphidia confluens Selys, 1878	聯紋春蜓	原生		NNT
+    金瑞治水園區 106
+
+Gomphidia fukienensis Chao, 1955	異紋春蜓	原生		NEN
+
+Heliogomphus retroflexus (Ris, 1912)	曲尾春蜓	原生		NLC
+    金瑞治水園區
+
+Ictinogomphus rapax (Rambur, 1842)	粗鉤春蜓	原生		NLC
+    金瑞治水園區 110
+
+Lamelligomphus formosanus (Matsumura, 1926)	鉤尾春蜓	原生		NLC
+    金瑞治水園區
+
+Leptogomphus sauteri Ris, 1912	紹德春蜓	原生	臺灣特有	NLC
+    金瑞治水園區
+
+Merogomphus pavici Martin, 1904	窄胸春蜓	原生		NNT
+    金瑞治水園區
+
+Sieboldius deflexus (Chao, 1955)	闊腹春蜓	原生		NNT
+
+Sinictinogomphus clavatus Fabricius, 1775	細鉤春蜓	原生		NLC
+    金瑞治水園區 114
+
+Sinogomphus formosanus Asahina, 1951	鉸剪春蜓	原生	臺灣特有	NLC
+Stylogomphus changi Asahina, 1966	球角春蜓	原生	臺灣特有	NLC
+Stylogomphus shirozui Asahina, 1966	錘角春蜓	原生		NLC
+
+絲蟌科 Lestidae				
+Indolestes cyaneus (Selys, 1862)	青紋絲蟌	原生		NLC
+Lestes concinnus Hagen, 1862	鑲紋絲蟌	原生		NE
+Lestes decipiens Kirby, 1894	隱紋絲蟌	原生		NNT
+Orolestes selysi McLachlan, 1895	長痣絲蟌	原生		NLC
+蜻蜓科 Libellulidae				
+Acisoma panorpoides Rambur, 1842	粗腰蜻蜓	原生		NLC
+    金瑞治水園區 178
+
+Agrionoptera insignis Rambur, 1842	八仙蜻蜓	原生		NEN
+
+Brachydiplax chalybea Brauer, 1868	橙斑蜻蜓	原生		NLC
+    金瑞治水園區 194 E
+    只有翅基接近橙色
+    雄蜓生性好鬥，常見兩隻雄蜓在空中互相競逐，一隻飛到另一隻上面，越飛越高而消失，但終究會有一隻飛回來固守地盤
+
+Brachythemis contaminata Fabricius, 1793	褐斑蜻蜓	原生		NLC
+    金瑞治水園區 58
+
+Cratilla lineata Brauer, 1878	線紋蜻蜓	原生		NLC
+Crocothemis servilia (Drury, 1773)	猩紅蜻蜓	原生		NLC
+    金瑞治水園區 94
+Deielia phaon (Selys, 1883)	短痣蜻蜓	原生		NE
+Diplacodes trivialis (Rambur, 1842)	侏儒蜻蜓	原生		NLC
+    金瑞治水園區 198
+
+Hydrobasileus croceus (Brauer, 1867)	硃紅蜻蜓	原生		NLC
+    金瑞治水園區 66
+Indothemis carnatica (Fabricius, 1798)	藍印蜻蜓	原生		DD
+Lathrecista asiatica (Fabricius, 1798)	海神蜻蜓	原生		DD
+Lyriothemis elegantissima Selys, 1883	廣腹蜻蜓	原生		NLC
+    金瑞治水園區 70
+
+Lyriothemis flava Oguma, 1915	樹穴蜻蜓	原生		NLC
+    金瑞治水園區 74
+
+Macrodiplax cora (Brauer, 1867)	高翔蜻蜓	原生		NLC
+
+Nannophya pygmaea Rambur, 1842	小紅蜻蜓	原生		NEN
+Nannophyopsis clara (Needham, 1930)	漆黑蜻蜓	原生		NEN
+Neurothemis fulvia Drury, 1773	淺褐蜻蜓	原生		NE
+
+Neurothemis taiwanensis Seehausen & Dow, 2016	善變蜻蜓	原生	臺灣特有	NLC
+    金瑞治水園區 78
+
+Neurothemis tullia (Drury, 1773)	雙截蜻蜓	原生		NCR
+Onychothemis tonkinensis Martin, 1904	琥珀蜻蜓	原生		NLC
+    金瑞治水園區
+Orthetrum albistylum (Selys, 1848)	白刃蜻蜓	原生		NCR
+
+Orthetrum glaucum Brauer, 1865	金黃蜻蜓	原生		NLC
+    金瑞治水園區 202
+
+Orthetrum internum McLachlan, 1894	扶桑蜻蜓	原生		NNT
+    金瑞治水園區
+
+Orthetrum luzonicum Brauer, 1868	呂宋蜻蜓	原生		NLC
+    金瑞治水園區 206
+
+Orthetrum melania (Selys, 1883)	灰黑蜻蜓	原生		NLC
+    金瑞治水園區
+
+Orthetrum pruinosum (Burmeister, 1839)	霜白蜻蜓	原生		NLC
+    金瑞治水園區 82
+
+Orthetrum sabina (Drury, 1773)	杜松蜻蜓	原生		NLC
+    金瑞治水園區 166
+
+Orthetrum testaceum (Burmeister, 1839)	赭黃蜻蜓	原生		
+
+Orthetrum triangulare (Selys, 1878)	鼎脈蜻蜓	原生		NLC
+    金瑞治水園區 210
+
+Pantala flavescens Fabricius, 1798	薄翅蜻蜓	原生		NLC
+    金瑞治水園區 86
+
+Potamarcha congener (Rambur, 1842)	溪神蜻蜓	原生		NLC
+    金瑞治水園區
+
+Pseudothemis zonata Burmeister, 1839	黃紉蜻蜓	原生		NLC
+    金瑞治水園區 126
+
+Rhyothemis regia (Brauer, 1867)	藍黑蜻蜓	原生		NLC
+    金瑞治水園區 182
+
+Rhyothemis severini Ris, 1913	賽琳蜻蜓	原生		NEN
+Rhyothemis triangularis Körby, 1889	三角蜻蜓	原生		NNT
+    金瑞治水園區 186
+
+Rhyothemis variegata (Linnaeus, 1763)	彩裳蜻蜓	原生		NLC
+    金瑞治水園區 150 E
+    飛行緩慢
+    停棲時，翅膀會緩慢上下擺動
+
+Sympetrum baccha (Selys, 1884)	赤衣蜻蜓	原生		RE
+Sympetrum cordulegaster (Selys, 1883)	長尾蜻蜓	原生		NE
+    金瑞治水園區
+
+Sympetrum darwinianum (Selys, 1883)	仲夏蜻蜓	原生		NE
+Sympetrum depressiusculum (Selys, 1841)	秋紅蜻蜓	原生		NE
+    金瑞治水園區
+Sympetrum eroticum Selys, 1883	焰紅蜻蜓	原生		NNT
+Sympetrum fonscolombii (Selys, 1840)	紅脈蜻蜓	原生		NE
+Sympetrum infuscatum (Selys, 1883)	褐頂蜻蜓	原生		NE
+Sympetrum kunckeli (Selys, 1884)	孔凱蜻蜓	原生		NE
+Sympetrum nantouensis Tang, Yeh & Chen, 2013	纖紅蜻蜓	原生	臺灣特有	NEN
+Sympetrum parvulum (Bartenev, 1912)	姬紅蜻蜓	原生		NE
+Sympetrum speciosum Oguma, 1915	黃基蜻蜓	原生		NLC
+Tholymis tillarga Fabricius, 1798	夜遊蜻蜓	原生		NLC
+    金瑞治水園區
+Tramea transmarina Brauer, 1867	海霸蜻蜓	原生		NLC
+Tramea virginia (Rambur, 1842)	大華蜻蜓	原生		NLC
+    金瑞治水園區 90
+Trithemis aurora Burmeister, 1839	紫紅蜻蜓	原生		NLC
+    金瑞治水園區 62
+Trithemis festiva (Rambur, 1842)	樂仙蜻蜓	原生		NLC
+    金瑞治水園區 190
+Trithemis pallidinervis (Kirby, 1889)	灰脈蜻蜓	原生		NE
+Urothemis signata (Rambur, 1842)	褐基蜻蜓	原生		NLC
+    金瑞治水園區 98
+Zygonyx takasago Asahina, 1966	高砂蜻蜓	原生		NLC
+    金瑞治水園區 122
+Zyxomma obtusum Albarda, 1881	灰影蜻蜓	原生		NLC
+    金瑞治水園區
+Zyxomma petiolatum Rambur, 1842	纖腰蜻蜓	原生		NLC
+    金瑞治水園區
+
+筊蜓科 Macromidiidae				
+Macromidia ishidai Asahina, 1964	黃尾筊蜓	原生		NCR
+
+蛛蜓科 Macromiidae				
+Epophthalmia elegans (Brauer, 1865)	慧眼蛛蜓	原生		NLC
+    金瑞治水園區
+
+Macromia clio Ris, 1916	海神蛛蜓	原生		NLC
+Macromia cupricincta Fraser, 1924				DD
+Macromia daimoji Okumura, 1949	耀沂蛛蜓	原生		NEN
+Macromia urania Ris, 1916	天王蛛蜓	原生		NLC
+
+琵蟌科 Platycnemididae				
+
+Coeliccia cyanomelas Ris, 1912	青黑琵蟌	原生		NLC
+    金瑞治水園區 138
+
+Coeliccia flavicauda Ris, 1912	黃尾琵蟌	原生		NLC
+
+Copera marginipes Rambur, 1842	脛蹼琵蟌	原生		NLC
+    金瑞治水園區 134 A、D 
+    3~4公分
+    飛行時很緩慢
+
+Onychargia atrocyana Selys, 1865	藍彩琵蟌	原生		NEN
+Prodasineura autumnalis Fraser, 1922	烏齒琵蟌	原生		DD
+Prodasineura croconota Ris, 1916	朱背琵蟌	原生		NLC
+    金瑞治水園區 142 A、C
+    3.5公分
+    飛行緩慢
+    警覺性低，易用手抓住
+
+Pseudocopera ciliata (Selys, 1863)	環紋琵蟌	原生		NLC
+    金瑞治水園區 130
+
+棘蟌科 Rhipidolestidae				
+Rhipidolestes aculeatus Ris, 1912	芽痣蹣蟌	原生		NLC
+    金瑞治水園區
+
+洵蟌科 Synlestidae				
+Megalestes riccii Navás, 1935	黃腹洵蟌	原生		NLC
+Sinolestes edita Needham, 1930	黃肩洵蟌	原生		NEN
